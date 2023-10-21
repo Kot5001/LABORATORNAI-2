@@ -1,0 +1,86 @@
+/* Основные стили для страницы */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.text {
+  margin: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+/* Стили для изменения текста при наведении */
+.text:hover {
+  color: red;
+  font-family: Arial, sans-serif;
+}
+
+/* Стили для новостей */
+.news {
+  margin-bottom: 10px;
+}
+
+.date {
+  font-weight: bold;
+}
+
+/* Стили для кнопок в форме */
+input[type="button"] {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #45a049;
+}
+
+/* Дополнительные стили для формы и кнопок */
+form {
+  position: absolute;
+  top: 180px;
+  left: 1400px;
+}
+/* Стили для новостей */
+.news {
+  margin-bottom: 10px;
+}
+
+.date {
+  font-weight: bold;
+  /* Добавляем разные цвета для разных ячеек */
+  color: #ff5733; /* 25.12.1990 */
+}
+
+/* Для второй ячейки */
+.date:nth-child(2) {
+  color: #33aaff; /* 06.08.1991 */
+}
+
+/* Для третьей ячейки */
+.date:nth-child(3) {
+  color: #b533ff; /* 01.10.1994 */
+}
+
+/* Для четвертой ячейки */
+.date:nth-child(4) {
+  color: #33ff6e; /* 17.10.1994 */
+}
+
