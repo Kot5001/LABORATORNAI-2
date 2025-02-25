@@ -7,12 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const tableBody = document.getElementById("productTable");
-    const searchInput = document.getElementById("searchInput");
-    const categoryFilter = document.getElementById("categoryFilter");
 
-    function renderTable(filteredProducts) {
+    function renderTable() {
         tableBody.innerHTML = "";
-        filteredProducts.forEach(product => {
+        products.forEach(product => {
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td>${product.id}</td>
@@ -28,32 +26,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function updateFilters() {
-        const searchText = searchInput.value.toLowerCase();
-        const selectedCategory = categoryFilter.value;
-
-        const filteredProducts = products.filter(product => {
-            const matchesSearch = product.name.toLowerCase().includes(searchText);
-            const matchesCategory = selectedCategory === "" || product.category === selectedCategory;
-            return matchesSearch && matchesCategory;
-        });
-
-        renderTable(filteredProducts);
-    }
-
-    function populateCategories() {
-        const categories = [...new Set(products.map(p => p.category))];
-        categories.forEach(category => {
-            const option = document.createElement("option");
-            option.value = category;
-            option.textContent = category;
-            categoryFilter.appendChild(option);
-        });
-    }
-
-    searchInput.addEventListener("input", updateFilters);
-    categoryFilter.addEventListener("change", updateFilters);
-
-    populateCategories();
-    renderTable(products);
+    renderTable();
 });
