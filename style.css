@@ -28,3 +28,7 @@ th, td {
 th {
     background-color: #f4f4f4;
 }
+
+input[type="file"] {
+    width: 100%;
+}
