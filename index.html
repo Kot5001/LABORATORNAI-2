@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Склад и инженерные данные</title>
+    <title>Складской учет</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Автоматизация управления складом</h1>
-    <p>Добро пожаловать в систему управления складом и инженерными данными!</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Наименование</th>
+                <th>Описание</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Категория</th>
+                <th>Бренд</th>
+                <th>Вес</th>
+            </tr>
+        </thead>
+        <tbody id="productTable">
+            <!-- Данные будут добавляться динамически -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
 </body>
 </html>
